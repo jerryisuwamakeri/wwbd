@@ -1,0 +1,201 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Jost', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+#header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Sections */
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    font-family: 'Lovelace', serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.campaign {
+    margin-bottom: 1.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ED7821;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #F73646;
+}
+
+/* Footer */
+#footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* About Section with Responsive Background Image */
+#about {
+    background: url('C:/Users/USER/Downloads/wwbd/wwbd_landing_page/assets/bg.png') no-repeat center center/cover;
+    position: relative;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* 50% transparency */
+    z-index: 1;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Donate Section Card */
+.donate-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.donate-card h2 {
+    color: #ED7821;
+    margin-bottom: 1rem;
+}
+
+.donate-card p {
+    margin-bottom: 1rem;
+}
+
+.donate-card .cta-button {
+    margin-top: 1rem;
+}
+
+/* Image Styling */
+.about-image, .mission-image, .campaigns-image {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.about-image img, .mission-image img, .campaigns-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover, .mission-image img:hover, .campaigns-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .about-image, .mission-image, .campaigns-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .cta-button {
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Adjustments for mobile */
+    #about .about-content,
+    #mission .mission-content,
+    #campaigns .campaigns-content {
+        width: 100%;
+    }
+
+    #mission .mission-image,
+    #campaigns .campaigns-image {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .donate-card {
+        padding: 1rem;
+    }
+
+    .donate-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .donate-card p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+    }
+}
